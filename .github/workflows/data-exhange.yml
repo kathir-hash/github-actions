@@ -13,7 +13,7 @@ jobs:
           foo=bar
           echo "${foo}"
         
-      - run: echo "x=${foo}" >> "GITHUB_ENV"
+      - run: echo "x=${foo}" >> "$GITHUB_ENV"
       - run: echo "${x}"
     
   consumer:
@@ -22,4 +22,4 @@ jobs:
     steps:
       - run: |
           echo ${{ needs.producer.foo }}
-          ech0 ${x}
+          ech0 ${x:-<UNSET>}
