@@ -11,7 +11,8 @@ jobs:
       - id: generate-foo
         run: |
           foo=bar
-          echo "${foo}"
+          
+      - run: echo "${foo}"
         
       - run: echo "x=${foo}" >> "$GITHUB_ENV"
       - run: echo "${x}"
