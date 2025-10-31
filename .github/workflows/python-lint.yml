@@ -1,0 +1,32 @@
+name: Python Lint & Format Check
+
+on:
+  pull_request:
+
+jobs:
+  python-lint:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+
+      # Step 3: Install dependencies
+      - name: Install linting tools
+        run: |
+          pip install flake8
+          pip install black
+
+      # Step 4: Run lint check
+      - name: Run flake8
+        run: flake8 .
+
+      # Step 5: Run format check
+      - name: Run black
+        run: black . --check

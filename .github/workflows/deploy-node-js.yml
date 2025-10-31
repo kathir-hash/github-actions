@@ -1,0 +1,23 @@
+name: 3 node deploy
+on:
+    push: 
+      branches: 
+        - main
+jobs:
+  node-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: setnode
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 18
+      - name: build
+        run: npm run build
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build  # assuming your static files are in the 'build' folder
+      - name: npm deploy 
+        uses: actions/deploy-pages@v4
