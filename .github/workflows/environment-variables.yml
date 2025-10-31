@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 env:
   WORKFLOW_VAR: I_AM_WORKFLOW_SCOPED
-  name-1: kathir
+  NAME-1: kathir
   
 jobs:
   job-1:
@@ -18,7 +18,7 @@ jobs:
           echo "WORKFLOW_VAR: $WORKFLOW_VAR"   # visible
           echo "JOB_VAR:      $JOB_VAR"        # visible
           echo "STEP_VAR:     $STEP_VAR"       # visible only here
-          echo "name:         $name-1"
+          echo "name:         $NAME-1"
 
       - name: Inspect scopes job 1 step 2
         run: |
