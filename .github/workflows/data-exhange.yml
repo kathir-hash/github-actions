@@ -13,7 +13,7 @@ jobs:
           foo=bar
           echo "${foo}"
           echo "x=${foo}" >> "$GITHUB_ENV"
-          echo foo=${foo}" >> "$GITHUB_OUTPUT"
+          echo "foo=${foo}" >> "$GITHUB_OUTPUT"
       - run: echo "${x}"
     
   consumer:
