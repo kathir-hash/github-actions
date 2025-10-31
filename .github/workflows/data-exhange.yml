@@ -11,10 +11,9 @@ jobs:
       - id: generate-foo
         run: |
           foo=bar
-          
-      - run: echo "${foo}"
-        
-      - run: echo "x=${foo}" >> "$GITHUB_ENV"
+          echo "${foo}"
+          echo "x=${foo}" >> "$GITHUB_ENV"
+          echo foo=${foo}" >> "$GITHUB_OUTPUT"
       - run: echo "${x}"
     
   consumer:
