@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 env:
   WORKFLOW_VAR: I_AM_WORKFLOW_SCOPED
-  NAME-1: kathir
+  NAME_1: kathir 
   
 jobs:
   job-1:
