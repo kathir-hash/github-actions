@@ -16,3 +16,11 @@ jobs:
         with:
           name: myfile
           path: a.txt
+
+  artifact-consumer:
+    name: Consume artifact
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v5.0.0
+        with:
+          path: a.txt
