@@ -12,7 +12,7 @@ jobs:
           echo "gac" >> a.txt
           
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
-          with:
-            name: myfile
-            path: a.txt
+        uses: actions/upload-artifact@v5.0.0
+        with:
+          name: myfile
+          path: a.txt
