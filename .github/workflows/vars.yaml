@@ -1,0 +1,16 @@
+name: secrects and variable
+on:
+  workflow_dispatch: 
+jobs:
+  staging-env:
+    runs-on: ubuntu-latest
+    environment: 
+      name: staging
+
+    env:
+      FOO_SE: ${{ secrets.EXAMPLE_REPOSITORY_SECRET }}
+      FOO_VA: ${{ vars.EXAMPLE_REPOSITORY_VARIABLE }}
+    steps:
+      - run: |
+          echo "Repo secret (masked):    ${FOO_SE}"
+          echo "Repo variable:           ${FOO_VA}"
