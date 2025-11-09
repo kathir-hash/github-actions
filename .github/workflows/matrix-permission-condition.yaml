@@ -9,7 +9,7 @@ jobs:
         nums: [1,2,3,4]
     steps:
       - name: print matrix
-        if: ${{ matrix.nums % 2 != 0 }}
+        if: ${{startsWith(matrix.nums,'1')}}
         run: |
           echo ${{matrix.nums}}
     timeout-minutes: 5
