@@ -1,0 +1,14 @@
+name: mcp
+on: 
+  workflow_dispatch: 
+jobs:
+  matrixj:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        nums: [1,2,3,4]
+    steps:
+      - name: print matrix
+        run: |
+          echo ${{matrix.nums}}
+    timeout-minutes: 5
