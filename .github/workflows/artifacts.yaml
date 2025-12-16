@@ -1,0 +1,20 @@
+name: artifacts
+on:
+  workflow_dispatch: 
+jobs:
+  produce-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create file
+        run: |
+          echo "Build started at $(date)" > build-info.txt
+          echo "Runner OS: $RUNNER_OS" >> build-info.txt
+      - name: Show file content
+        run: cat build-info.txt
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: build
+            path: build-info.txt
+        
+        
