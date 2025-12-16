@@ -1,0 +1,14 @@
+name: download
+on:
+  workflow_dispatch: 
+
+jobs:
+ runj:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: echo hello running
+      - if: github.ref == 'refs/heads/main'
+        run: echo 'This runs only on main branch'
+      - if: github.repository_owner != ''
+        run: echo ${{github.repository_owner}}
+        shell: bash
