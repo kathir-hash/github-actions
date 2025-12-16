@@ -28,9 +28,9 @@ jobs:
           with:
             path: build-info.txt
         - name: Unzip artifact
-          run: unzip build-info.zip
+          run: unzip build.zip
 
         - run: |
-            cd build-info
+            cd build
             cat build-info.txt
         
