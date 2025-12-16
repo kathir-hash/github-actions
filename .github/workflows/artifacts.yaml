@@ -29,6 +29,6 @@ jobs:
           path: build-info.txt
       - run: ls -R
       - run: |
-          cd ./build-info.txt/build-info.txt
+          cd ./build-info.txt/build
           cat build-info.txt
       
