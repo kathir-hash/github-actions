@@ -27,6 +27,6 @@ jobs:
         uses: actions/download-artifact@v4 
         with:
           path: build-info.txt
-      - run: ls -a
+      - run: ls -R
       - run: cat build-info.txt
       
