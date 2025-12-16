@@ -9,4 +9,4 @@ jobs:
         shell: bash
       - run: |
           uname -a
-          ech0 "Runner os:" $RUNNER_OS
+          echo "Runner os:" $RUNNER_OS
