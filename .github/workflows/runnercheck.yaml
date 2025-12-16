@@ -1,0 +1,12 @@
+name: check runner
+on: 
+  workflow_dispatch: 
+jobs:
+  check-runner:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: echo hello world
+        shell: bash
+      - run: |
+          uname -a
+          ech0 "Runner os:" $RUNNER_OS
