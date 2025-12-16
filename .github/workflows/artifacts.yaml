@@ -2,8 +2,8 @@ name: artifacts upload and download
 on:
   workflow_dispatch: 
   push:
-    branches: 
-      main/artifacts.yaml
+    paths: 
+      - 'refs/heads/main/artifacts.yaml'
 jobs:
   produce-artifact:
     runs-on: ubuntu-latest
