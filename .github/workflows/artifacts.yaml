@@ -1,4 +1,4 @@
-name: artifacts
+name: artifacts upload and download
 on:
   workflow_dispatch: 
 jobs:
